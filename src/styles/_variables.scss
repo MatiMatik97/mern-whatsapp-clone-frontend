@@ -13,12 +13,20 @@ $primaryFontFamily: (
   sans-serif
 );
 
-// background
-$primaryBackgroundColor: #dadbd3;
-$secondaryBackgroundColor: #ededed;
+// app
+$primaryAppBackgroundColor: #dadbd3;
+$secondaryAppBackgroundColor: #ededed;
+$primaryAppColor: black;
 
-// color
-$primaryColor: black;
+// sidebar
+$primarySidebarBackgroundColor: lightgray;
+$secondarySidebarBackgroundColor: #f6f6f6;
+$primarySidebarColor: gray;
+$secondarySidebarColor: black;
+
+// chat
+$primaryChatBackgroundColor: lightgray;
+$primaryChatColor: black;
 
 // shadow
 $primaryShadowColor: rgba(#000000, 0.75);

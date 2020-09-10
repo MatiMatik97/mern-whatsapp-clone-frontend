@@ -1,0 +1,53 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.sidebar {
+  @include displayFlex(initial, initial, column);
+  flex: 0.35;
+  color: $secondarySidebarColor;
+
+  &__header {
+    @include displayFlex(space-between);
+    padding: 20px;
+    border-right: 1px solid $primarySidebarBackgroundColor;
+  }
+
+  &__headerRight {
+    @include displayFlex(space-between, center);
+    min-width: 10vw;
+
+    .MuiSvgIcon-root {
+      color: $primarySidebarColor;
+    }
+  }
+
+  &__search {
+    @include displayFlex(initial, center);
+    height: 39px;
+    padding: 10px;
+  }
+
+  &__searchContainer {
+    @include displayFlex(initial, center);
+    @include whbc(100%, 35px, $secondarySidebarBackgroundColor);
+    border-radius: 20px;
+    padding: 20px;
+
+    .MuiSvgIcon-root {
+      color: $primarySidebarColor;
+    }
+
+    > input {
+      color: $secondarySidebarColor;
+      border: none;
+      outline: none;
+      margin-left: 10px;
+      background-color: $secondarySidebarBackgroundColor;
+    }
+  }
+
+  &__chats {
+    flex: 1;
+    overflow: auto;
+  }
+}

@@ -21,12 +21,12 @@ body {
 }
 
 .app {
-  @include displayGridP(center);
-  @include whbc(initial, 100vh);
+  @include displayGrid(center);
+  @include whbc(initial, 100vh, $primaryAppBackgroundColor, $primaryAppColor);
 
   &__body {
     display: flex;
-    @include whbc(90vw, 90vh, $secondaryBackgroundColor);
+    @include whbc(90vw, 90vh, $secondaryAppBackgroundColor);
     box-shadow: -1px 4px 20px -6px $primaryShadowColor;
   }
 }

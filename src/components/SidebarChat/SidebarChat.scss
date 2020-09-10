@@ -1,0 +1,23 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.sidebarChat {
+  display: flex;
+  padding: 20px;
+  cursor: pointer;
+  border-bottom: 1px solid $secondarySidebarBackgroundColor;
+  $secondarySidebarColor: black;
+
+  &:hover {
+    background-color: $secondarySidebarBackgroundColor;
+  }
+
+  &__info {
+    margin-left: 15px;
+
+    > h2 {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+  }
+}

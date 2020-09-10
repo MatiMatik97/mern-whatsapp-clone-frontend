@@ -1,6 +1,7 @@
 @import "./variables";
 
-@mixin displayFlexJaf(
+// justify, align, flexD
+@mixin displayFlex(
   $justifyContent: initial,
   $alignItems: initial,
   $flexDirection: initial
@@ -11,16 +12,18 @@
   flex-direction: $flexDirection;
 }
 
-@mixin displayGridP($placeItems: initial) {
+// place
+@mixin displayGrid($placeItems: initial) {
   display: grid;
   place-items: $placeItems;
 }
 
+// width, height, background, color
 @mixin whbc(
   $width: initial,
   $height: initial,
-  $background: $primaryBackgroundColor,
-  $color: $primaryColor
+  $background: initial,
+  $color: initial
 ) {
   width: $width;
   height: $height;
@@ -28,11 +31,13 @@
   @include bc($background, $color);
 }
 
-@mixin bc($background: $primaryBackgroundColor, $color: $primaryColor) {
+// background, color
+@mixin bc($background: initial, $color: initial) {
   background: $background;
   color: $color;
 }
 
+// margin, padding
 @mixin mp($margin: initial, $padding: initial) {
   margin: $margin;
   padding: $padding;
