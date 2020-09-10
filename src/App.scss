@@ -28,5 +28,6 @@ body {
     display: flex;
     @include whbc(90vw, 90vh, $secondaryAppBackgroundColor);
     box-shadow: -1px 4px 20px -6px $primaryShadowColor;
+    max-width: 1200px;
   }
 }
