@@ -14,7 +14,7 @@ const Chat: React.FC = () => {
   return (
     <div className="chat">
       <div className="chat__header">
-        <Avatar />
+        <Avatar src="https://i.imgur.com/BSy52Gj.gif" />
 
         <div className="chat__headerInfo">
           <h3>Room name</h3>
@@ -60,7 +60,9 @@ const Chat: React.FC = () => {
       </div>
 
       <div className="chat__footer">
-        <InsertEmoticon />
+        <IconButton>
+          <InsertEmoticon />
+        </IconButton>
 
         <form>
           <input type="text" placeholder="Type a message" />
@@ -69,7 +71,9 @@ const Chat: React.FC = () => {
           </Button>
         </form>
 
-        <Mic />
+        <IconButton>
+          <Mic />
+        </IconButton>
       </div>
     </div>
   );

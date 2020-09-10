@@ -50,6 +50,7 @@
   &__chats {
     flex: 1;
     overflow: auto;
+    margin-top: 10px;
 
     &::-webkit-scrollbar,
     &::-webkit-scrollbar-thumb {

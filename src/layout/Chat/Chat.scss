@@ -89,9 +89,12 @@
       }
     }
 
-    > .MuiSvgIcon-root {
-      color: $secondaryChatColor;
+    > :not(form) {
       margin: 0 10px;
+    }
+
+    .MuiSvgIcon-root {
+      color: $secondaryChatColor;
     }
   }
 }
