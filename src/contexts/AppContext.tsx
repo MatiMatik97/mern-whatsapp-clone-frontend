@@ -48,16 +48,16 @@ export const AppReducer: Reducer<AppProps, AppActions> = (state, action) => {
 // CONTEXT
 
 export const appInitialState: AppProps = {
-  //   user: null,
-  user: {
-    uid: "USERID12345",
-    displayName: `Tester`,
-    photoURL:
-      "https://www.graphicsprings.com/filestorage/stencils/3f09542940267c887a5bcef0724cf3a4.png?width=500&height=500",
-    email: null,
-    phoneNumber: null,
-    providerId: "client",
-  },
+    user: null,
+  // user: {
+  //   uid: "USERID12345",
+  //   displayName: `Tester`,
+  //   photoURL:
+  //     "https://www.graphicsprings.com/filestorage/stencils/3f09542940267c887a5bcef0724cf3a4.png?width=500&height=500",
+  //   email: null,
+  //   phoneNumber: null,
+  //   providerId: "client",
+  // },
   room: null,
 };
 

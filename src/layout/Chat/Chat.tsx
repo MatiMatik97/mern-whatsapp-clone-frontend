@@ -34,11 +34,11 @@ const Chat: React.FC<ChatProps> = ({ messages }) => {
       room_id: room?._id || "",
     };
 
-    const responseSensMessage = await MessageService.sendMessage(
+    const responseSendMessage = await MessageService.sendMessage(
       msgData as Message
     );
 
-    if (responseSensMessage.status === "SUCCESS") {
+    if (responseSendMessage.status === "SUCCESS") {
       setMsgInput("");
     }
   };

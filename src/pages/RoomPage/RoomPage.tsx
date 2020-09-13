@@ -36,12 +36,6 @@ const RoomPage: React.FC = () => {
           user?.uid || ""
         );
 
-        // const index = rooms.map((room: Room) => room?._id).indexOf(room_id);
-        // console.log(index);
-        // if (index >= 0) {
-        //   console.log(rooms[index]);
-        // }
-
         if (responseGetRoom.status === "SUCCESS") {
           dispatch({ type: "SET_ROOM", payload: responseGetRoom.data[0] });
 
@@ -83,7 +77,7 @@ const RoomPage: React.FC = () => {
 
   return (
     <div className="roomPage">
-      <Sidebar rooms={rooms} />
+      <Sidebar rooms={rooms} setRooms={setRooms} />
 
       {messages ? (
         <Chat messages={messages} />

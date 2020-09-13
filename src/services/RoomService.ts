@@ -51,46 +51,79 @@ RoomService.getRoom = async (room_id: string, user_id: string) => {
   }
 };
 
-// MessageService.getCharactersList = async () => {
-//     try {
-//         const response = await ApiService.request('/api/character/list', {
-//             method: 'get',
-//             Authorization: `Bearer ${localStorage.getItem(ACCESS_TOKEN)}`
-//         });
+RoomService.searchRooms = async (name: string, user_id: string) => {
+  try {
+    const response = await ApiService.request({
+      url: "api/rooms/search",
+      method: "GET",
+      params: {
+        name: name,
+        user_id: user_id,
+      },
+    });
 
-//         return {
-//             status: 'SUCCESS',
-//             data: response.data
-//         }
-//     }
-//     catch (error) {
-//         console.log(error);
-//         return {
-//             status: 'ERROR'
-//         }
-//     }
-// };
+    return {
+      status: "SUCCESS",
+      data: response.data,
+    };
+  } catch (error) {
+    console.error(error);
 
-// MessageService.createCharacter = async (data) => {
-//     try {
-//         // const response = await ApiService.request('/api/character/create', {
-//         await ApiService.request('/api/character/create', {
-//             method: 'post',
-//             data,
-//             Authorization: `Bearer ${localStorage.getItem(ACCESS_TOKEN)}`
-//         });
+    return {
+      status: "ERROR",
+      data: error,
+    };
+  }
+};
 
-//         return {
-//             status: 'SUCCESS',
-//             // data: response.data
-//         }
-//     }
-//     catch (error) {
-//         console.log(error);
-//         return {
-//             status: 'ERROR'
-//         }
-//     }
-// };
+RoomService.joinRoom = async (user_id: string, room_id: string) => {
+  try {
+    const response = await ApiService.request({
+      url: "/api/rooms/join",
+      method: "POST",
+      data: { user_id: user_id as string, room_id: room_id as string },
+    });
+
+    return {
+      status: "SUCCESS",
+      data: response.data,
+    };
+  } catch (error) {
+    console.log(error);
+
+    return {
+      status: "ERROR",
+      data: error,
+    };
+  }
+};
+
+RoomService.createRoom = async (name: string, user_id: string) => {
+  try {
+    const randomSeed = Math.floor(Math.random() * 10000) + 10000;
+
+    const response = await ApiService.request({
+      url: "/api/rooms/create",
+      method: "POST",
+      data: {
+        name: name,
+        users: [user_id],
+        image: `https://avatars.dicebear.com/api/human/${randomSeed}.svg`,
+      },
+    });
+
+    return {
+      status: "SUCCESS",
+      data: response.data,
+    };
+  } catch (error) {
+    console.log(error);
+
+    return {
+      status: "ERROR",
+      data: error,
+    };
+  }
+};
 
 export default RoomService;

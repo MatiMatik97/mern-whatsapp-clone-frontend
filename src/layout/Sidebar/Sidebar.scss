@@ -47,12 +47,18 @@
       color: $primarySidebarColor;
     }
 
-    > input {
-      color: $secondarySidebarColor;
-      border: none;
-      outline: none;
-      margin-left: 10px;
-      background-color: $secondarySidebarBackgroundColor;
+    > form {
+      > input {
+        color: $secondarySidebarColor;
+        border: none;
+        outline: none;
+        margin-left: 10px;
+        background-color: $secondarySidebarBackgroundColor;
+      }
+
+      > button {
+        display: none;
+      }
     }
   }
 
