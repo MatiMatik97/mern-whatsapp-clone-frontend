@@ -5,7 +5,11 @@ import { DonutLarge, Chat, MoreVert, SearchOutlined } from "@material-ui/icons";
 import SidebarChat from "../../components/SidebarChat/SidebarChat";
 import { useAppContext } from "../../contexts/AppContext";
 
-const Sidebar: React.FC = () => {
+interface SidebarProps {
+  rooms: Room[];
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ rooms }) => {
   const [{ user }] = useAppContext();
 
   return (
@@ -39,23 +43,17 @@ const Sidebar: React.FC = () => {
       </div>
 
       <div className="sidebar__chats">
-        <SidebarChat
-          image="https://i.imgur.com/BSy52Gj.gif"
-          name="Room Name #1"
-          message="Last message... #1"
-        />
-
-        <SidebarChat
-          image="https://i.imgur.com/BSy52Gj.gif"
-          name="Room Name #2"
-          message="Last message... #2"
-        />
-
-        <SidebarChat
-          image="https://i.imgur.com/BSy52Gj.gif"
-          name="Room Name #3"
-          message="Last message... #3"
-        />
+        {rooms.map((room) => (
+          <SidebarChat
+            key={room._id}
+            id={room._id}
+            image={room.image}
+            name={room.name}
+            members={`${room.users.length} ${
+              room.users.length === 1 ? "member" : "members"
+            }`}
+          />
+        ))}
       </div>
     </div>
   );

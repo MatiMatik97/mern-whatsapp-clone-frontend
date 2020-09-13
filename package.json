@@ -8,13 +8,20 @@
     "@testing-library/user-event": "^7.2.1",
     "@types/jest": "^24.9.1",
     "@types/node": "^12.12.56",
+    "@types/pusher-js": "^4.2.2",
     "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/react-text-truncate": "^0.14.0",
+    "axios": "^0.20.0",
     "firebase": "^7.20.0",
+    "pusher-js": "^7.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-flip-move": "^3.0.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
+    "react-text-truncate": "^0.16.0",
     "typescript": "^3.7.5"
   },
   "scripts": {
@@ -41,7 +48,6 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^9.5.0",
-    "@types/react-router-dom": "^5.1.5",
     "node-sass": "^4.14.1"
   }
 }

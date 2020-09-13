@@ -4,4 +4,12 @@
 .roomPage {
   display: flex;
   @include whbc(90vw, 90vh, $secondaryAppBackgroundColor);
+  color: $primaryChatColor;
+
+  &__notFound {
+    @include displayGrid(center);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
 }

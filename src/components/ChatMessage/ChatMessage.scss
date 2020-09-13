@@ -9,6 +9,7 @@
   border-radius: 10px;
   background-color: $secondaryChatBackgroundColor;
   margin-bottom: 30px;
+  transform-origin: top center !important;
 
   &--own {
     margin-left: auto;

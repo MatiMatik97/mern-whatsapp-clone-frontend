@@ -5,6 +5,7 @@
   @include displayFlex(center, center, column);
   width: 100%;
   height: 100%;
+  color: $secondaryLoginColor;
 
   > img {
     height: 100px;

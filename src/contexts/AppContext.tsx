@@ -10,12 +10,13 @@ import { UserInfo } from "firebase";
 // TYPES AND INTERFACES
 
 type AppActions = {
-  type: "SET_USER" | "ADD_USER";
+  type: "SET_USER" | "SET_ROOM";
   payload: any;
 };
 
 interface AppProps {
   user: UserInfo | null;
+  room: Room | null;
 }
 
 interface AppProviderProps {
@@ -36,6 +37,9 @@ export const AppReducer: Reducer<AppProps, AppActions> = (state, action) => {
     case "SET_USER":
       return { ...state, user: action.payload };
 
+    case "SET_ROOM":
+      return { ...state, room: action.payload };
+
     default:
       return state;
   }
@@ -54,6 +58,7 @@ export const appInitialState: AppProps = {
     phoneNumber: null,
     providerId: "client",
   },
+  room: null,
 };
 
 export const AppContext = createContext({} as AppContextProps);
