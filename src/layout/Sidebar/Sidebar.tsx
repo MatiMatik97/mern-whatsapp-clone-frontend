@@ -8,7 +8,10 @@ const Sidebar: React.FC = () => {
   return (
     <div className="sidebar">
       <div className="sidebar__header">
-        <Avatar src="https://i.imgur.com/BSy52Gj.gif" />
+        <div className="sidebar__headerInfo">
+          <Avatar src="https://i.imgur.com/BSy52Gj.gif" />
+          <h3>Mateusz</h3>
+        </div>
 
         <div className="sidebar__headerRight">
           <IconButton>

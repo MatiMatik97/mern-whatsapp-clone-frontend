@@ -7,6 +7,15 @@
   color: $secondarySidebarColor;
   border-right: 1px solid $primarySidebarBackgroundColor;
 
+  &__headerInfo {
+    @include displayFlex(initial, center);
+
+    > h3 {
+      margin: 0 10px;
+      font-weight: 500;
+    }
+  }
+
   &__header {
     @include displayFlex(space-between);
     padding: 20px;
