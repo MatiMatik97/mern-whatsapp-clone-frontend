@@ -1,6 +1,6 @@
 import React from "react";
 import "./Chat.scss";
-import { Avatar, IconButton, Button } from "@material-ui/core";
+import { Avatar, IconButton } from "@material-ui/core";
 import {
   SearchOutlined,
   AttachFile,
@@ -66,9 +66,7 @@ const Chat: React.FC = () => {
 
         <form>
           <input type="text" placeholder="Type a message" />
-          <Button type="submit" variant="outlined">
-            Send
-          </Button>
+          <button type="submit">Send</button>
         </form>
 
         <IconButton>
