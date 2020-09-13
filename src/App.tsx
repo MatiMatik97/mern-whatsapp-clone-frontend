@@ -1,13 +1,12 @@
 import React from "react";
 import "./App.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { useUserContext } from "./contexts/UserContext";
+import { useAppContext } from "./contexts/AppContext";
 import LoginPage from "./pages/LoginPage/LoginPage";
-import Sidebar from "./layout/Sidebar/Sidebar";
-import Chat from "./layout/Chat/Chat";
+import RoomPage from "./pages/RoomPage/RoomPage";
 
 const App: React.FC = () => {
-  const [{ user }] = useUserContext();
+  const [{ user }] = useAppContext();
 
   return (
     <div className="app">
@@ -17,11 +16,11 @@ const App: React.FC = () => {
         ) : (
           <Router>
             <Switch>
+              <Route path="/rooms/:room_id">
+                <RoomPage />
+              </Route>
               <Route path="/">
-                <>
-                  <Sidebar />
-                  <Chat />
-                </>
+                <RoomPage />
               </Route>
             </Switch>
           </Router>

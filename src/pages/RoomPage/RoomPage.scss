@@ -1,0 +1,7 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.roomPage {
+  display: flex;
+  @include whbc(90vw, 90vh, $secondaryAppBackgroundColor);
+}

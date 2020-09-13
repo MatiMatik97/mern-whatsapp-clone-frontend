@@ -2,16 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import {
-  UserReducer,
-  userInitialState,
-  UserProvider,
-} from "./contexts/UserContext";
+  AppReducer,
+  appInitialState,
+  AppProvider,
+} from "./contexts/AppContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <UserProvider initialState={userInitialState} reducer={UserReducer}>
+    <AppProvider initialState={appInitialState} reducer={AppReducer}>
       <App />
-    </UserProvider>
+    </AppProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

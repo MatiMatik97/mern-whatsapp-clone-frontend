@@ -9,29 +9,29 @@ import { UserInfo } from "firebase";
 
 // TYPES AND INTERFACES
 
-type UserActions = {
+type AppActions = {
   type: "SET_USER" | "ADD_USER";
   payload: any;
 };
 
-interface UserProps {
+interface AppProps {
   user: UserInfo | null;
 }
 
-interface UserProviderProps {
-  reducer: Reducer<UserProps, UserActions>;
-  initialState: UserProps;
+interface AppProviderProps {
+  reducer: Reducer<AppProps, AppActions>;
+  initialState: AppProps;
   children: JSX.Element;
 }
 
-interface UserContextProps {
-  state: UserProps;
-  dispatch: Dispatch<UserActions>;
+interface AppContextProps {
+  state: AppProps;
+  dispatch: Dispatch<AppActions>;
 }
 
 // REDUCER
 
-export const UserReducer: Reducer<UserProps, UserActions> = (state, action) => {
+export const AppReducer: Reducer<AppProps, AppActions> = (state, action) => {
   switch (action.type) {
     case "SET_USER":
       return { ...state, user: action.payload };
@@ -43,10 +43,10 @@ export const UserReducer: Reducer<UserProps, UserActions> = (state, action) => {
 
 // CONTEXT
 
-export const userInitialState: UserProps = {
+export const appInitialState: AppProps = {
   //   user: null,
   user: {
-    uid: "TESTINGID12345",
+    uid: "USERID12345",
     displayName: `Tester`,
     photoURL:
       "https://www.graphicsprings.com/filestorage/stencils/3f09542940267c887a5bcef0724cf3a4.png?width=500&height=500",
@@ -56,9 +56,9 @@ export const userInitialState: UserProps = {
   },
 };
 
-export const UserContext = createContext({} as UserContextProps);
+export const AppContext = createContext({} as AppContextProps);
 
-export const UserProvider: React.FC<UserProviderProps> = ({
+export const AppProvider: React.FC<AppProviderProps> = ({
   reducer,
   initialState,
   children,
@@ -66,13 +66,13 @@ export const UserProvider: React.FC<UserProviderProps> = ({
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
-    <UserContext.Provider value={{ state, dispatch }}>
+    <AppContext.Provider value={{ state, dispatch }}>
       {children}
-    </UserContext.Provider>
+    </AppContext.Provider>
   );
 };
 
-export const useUserContext = () => {
-  const { state, dispatch } = useContext(UserContext);
+export const useAppContext = () => {
+  const { state, dispatch } = useContext(AppContext);
   return [state, dispatch] as const;
 };

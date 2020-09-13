@@ -3,10 +3,10 @@ import "./LoginPage.scss";
 import { Button } from "@material-ui/core";
 import WhatsappLogo from "./whatsapp_logo.png";
 import { auth, provider } from "../../firebase";
-import { useUserContext } from "../../contexts/UserContext";
+import { useAppContext } from "../../contexts/AppContext";
 
 const LoginPage: React.FC = () => {
-  const [, dispatch] = useUserContext();
+  const [, dispatch] = useAppContext();
 
   const signInWithGoogle = async () => {
     try {

@@ -3,17 +3,17 @@ import "./Sidebar.scss";
 import { IconButton, Avatar } from "@material-ui/core";
 import { DonutLarge, Chat, MoreVert, SearchOutlined } from "@material-ui/icons";
 import SidebarChat from "../../components/SidebarChat/SidebarChat";
-import { useUserContext } from "../../contexts/UserContext";
+import { useAppContext } from "../../contexts/AppContext";
 
 const Sidebar: React.FC = () => {
-  const [{ user }] = useUserContext();
+  const [{ user }] = useAppContext();
 
   return (
     <div className="sidebar">
       <div className="sidebar__header">
         <div className="sidebar__headerInfo">
-          <Avatar src="https://i.imgur.com/BSy52Gj.gif" />
-          <h3>{user?.displayName}</h3>
+          <Avatar src={user?.photoURL || ""} />
+          <h3>{user?.displayName || "Your name goes here..."}</h3>
         </div>
 
         <div className="sidebar__headerRight">
