@@ -39,7 +39,7 @@ MessageService.sendMessage = async (msgData: Message) => {
       data: response.data,
     };
   } catch (error) {
-    console.log(error);
+    console.error(error);
 
     return {
       status: "ERROR",

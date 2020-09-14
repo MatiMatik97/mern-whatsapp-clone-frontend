@@ -89,7 +89,7 @@ RoomService.joinRoom = async (user_id: string, room_id: string) => {
       data: response.data,
     };
   } catch (error) {
-    console.log(error);
+    console.error(error);
 
     return {
       status: "ERROR",
@@ -117,7 +117,7 @@ RoomService.createRoom = async (name: string, user_id: string) => {
       data: response.data,
     };
   } catch (error) {
-    console.log(error);
+    console.error(error);
 
     return {
       status: "ERROR",

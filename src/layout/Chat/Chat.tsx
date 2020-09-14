@@ -57,7 +57,7 @@ const Chat: React.FC<ChatProps> = ({ messages }) => {
 
         <div className="chat__headerInfo">
           <h3>{room?.name || "Room name"}</h3>
-          <p>{`Room id: ${room?._id || ""}`}</p>
+          <p>{`Room ID: ${room?._id || ""}`}</p>
         </div>
 
         <div className="chat__headerRight">

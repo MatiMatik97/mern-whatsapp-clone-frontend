@@ -23,7 +23,6 @@
 
   &__headerRight {
     @include displayFlex(space-between, center);
-    min-width: 10vw;
 
     .MuiSvgIcon-root {
       color: $primarySidebarColor;
@@ -37,7 +36,7 @@
   }
 
   &__searchContainer {
-    @include displayFlex(initial, center);
+    @include displayFlex(center, center);
     @include whbc(100%, 35px, $secondarySidebarBackgroundColor);
     border-radius: 20px;
     padding: 20px;
@@ -45,10 +44,17 @@
 
     .MuiSvgIcon-root {
       color: $primarySidebarColor;
+      height: 30px;
     }
 
     > form {
+      flex: 1;
+      height: 30px;
+      padding-right: 10px;
+
       > input {
+        width: 100%;
+        height: 30px;
         color: $secondarySidebarColor;
         border: none;
         outline: none;

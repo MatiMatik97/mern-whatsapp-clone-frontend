@@ -48,7 +48,7 @@ export const AppReducer: Reducer<AppProps, AppActions> = (state, action) => {
 // CONTEXT
 
 export const appInitialState: AppProps = {
-    user: null,
+  user: null,
   // user: {
   //   uid: "USERID12345",
   //   displayName: `Tester`,
