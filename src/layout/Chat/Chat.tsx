@@ -7,12 +7,14 @@ import {
   MoreVert,
   InsertEmoticon,
   Mic,
+  FileCopyOutlined,
 } from "@material-ui/icons";
 import ChatMessage from "../../components/ChatMessage/ChatMessage";
 import { useAppContext } from "../../contexts/AppContext";
 import { formatDate } from "../../helpers";
 import FlipMove from "react-flip-move";
 import MessageService from "../../services/MessageService";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 interface ChatProps {
   messages: Message[] | null;
@@ -20,6 +22,8 @@ interface ChatProps {
 
 const Chat: React.FC<ChatProps> = ({ messages }) => {
   const [msgInput, setMsgInput] = useState("");
+  // eslint-disable-next-line
+  const [copyValue, setCopyValue] = useState("");
   const [{ user, room }] = useAppContext();
 
   const sendMessage = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -57,7 +61,18 @@ const Chat: React.FC<ChatProps> = ({ messages }) => {
 
         <div className="chat__headerInfo">
           <h3>{room?.name || "Room name"}</h3>
-          <p>{`Room ID: ${room?._id || ""}`}</p>
+          <p>
+            {`Room ID: ${room?._id || ""}`}
+
+            <CopyToClipboard
+              text={room?._id || ""}
+              onCopy={(val) => setCopyValue(val)}
+            >
+              <IconButton title={"Copy to clipboard"}>
+                <FileCopyOutlined />
+              </IconButton>
+            </CopyToClipboard>
+          </p>
         </div>
 
         <div className="chat__headerRight">

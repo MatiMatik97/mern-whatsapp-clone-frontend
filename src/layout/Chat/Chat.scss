@@ -23,6 +23,8 @@
 
     > p {
       color: $secondaryChatColor;
+      @include displayFlex(initial, center);
+      gap: 10px;
     }
   }
 

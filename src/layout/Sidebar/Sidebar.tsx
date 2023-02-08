@@ -133,7 +133,7 @@ const Sidebar: React.FC<SidebarProps> = ({ rooms, setRooms }) => {
             <input
               id="sidebar__searchInput"
               type="text"
-              placeholder="Search or create a new room"
+              placeholder="Create new room or search by ID"
               value={searchInput}
               onChange={searchRooms}
             />
