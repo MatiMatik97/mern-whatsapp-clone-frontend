@@ -1,44 +1,9 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Whatsapp Clone web appliaction
+This is a Whatsapp Clone web appliaction. Frontend was written in React with Typescript and SASS and is hosted on firebase, backend in Node with Typescript hosted on Render. You can login with Google account or as guest to only try the functionality. Application implements basic chat functionality with rooms, users and real-time messaging. You can create rooms, join rooms by their ID and send messages that appear instantly on other user's screen. Whenever a new user joins room, user count updates immediately.
 
-## Available Scripts
+Frontend: [mern-whatsapp-clone-frontend](https://github.com/MatiMatik97/mern-whatsapp-clone-frontend)
+Backend: [mern-whatsapp-clone-backend](https://github.com/MatiMatik97/mern-whatsapp-clone-backend)
+Site: [whatsapp-clone-mern-80df8.web.app](https://whatsapp-clone-mern-80df8.web.app/)
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+DEMO:
+![image](https://user-images.githubusercontent.com/46346197/217788319-aa25c810-191a-425d-8b45-6a9a273e5f03.png)
